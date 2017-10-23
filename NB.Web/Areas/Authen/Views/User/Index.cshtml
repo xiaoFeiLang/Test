@@ -1,0 +1,42 @@
+﻿
+@using NB.Models.Authen.User
+@using NB.Models.AdminCommon
+ 
+@model UserModel
+@{
+    Layout = null;
+}
+@{ 
+    ViewBag.Title = ViewBag.CurrentTitle + " - NB RMS";
+    var changePwdButton = new ButtonModel();
+    var editButton = new ButtonModel();
+    var deleteButton = new ButtonModel();
+    changePwdButton = ViewBag.ChangePwd;
+    editButton = ViewBag.Edit;
+    deleteButton = ViewBag.Delete;
+}
+
+@section css{
+    @Styles.Render("~/bundles/css/jqueryui")
+    }
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+    </div>
+</body>
+</html>*@
+
+<div id="content-body" class="row-fluid">
+    <div class="span22">
+        @Html.Partial("Search",Model.Search)
+        @Html.Partial("List")
+        @*@Html.Partial("_FormModal")*@
+    </div>
+</div>

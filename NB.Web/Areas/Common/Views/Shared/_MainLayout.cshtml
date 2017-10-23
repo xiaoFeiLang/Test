@@ -1,0 +1,55 @@
+﻿@using NB.Web.Extension;
+@using NB.Models.AdminCommon;
+@{ 
+    List<SidebarMenuModel> sidebarMenuList = ViewBag.SidebarMenuModel;
+    BreadCrumbNavModel breadCrumbNavData = ViewBag.BreadCrumbModel;
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @*<title>@ViewBag.Title</title>
+    @Styles.Render("~bundles/css/bootstrap2")
+    @RenderSection("css",false)
+    @Styles.Render("~bundles/css/admin")*@
+
+     <title>@ViewBag.Title</title>
+    @Styles.Render("~/bundles/css/bootstrap2")
+    @RenderSection("css", false)
+    @Styles.Render("~/bundles/css/admin") 
+    
+</head>
+<body>
+    <div id="header">
+        <h1><a href="dashboard.html">Matrix Admin</a></h1>
+    </div>
+    @Html.Partial("_HeaderMenu")
+
+    @Html.Partial("_SidebarMenu", sidebarMenuList)
+    <div id="content">
+        <!--BreadCrumbs-->
+        
+        <!--BreadCrumbs-->
+        <!--Body-->
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+        <!--Body-->
+    </div>
+
+    @Scripts.Render("~/bundles/js/admin-jq")
+    @Scripts.Render("~/bundles/js/bootstrap2")
+    @Scripts.Render("~/bundles/js/jqdataTables")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/js/admin-plugin")
+    <script src="~/Content/admin/js/matrix.js"></script>
+
+    @RenderSection("scripts", required: false)
+   
+</body>
+</html>
