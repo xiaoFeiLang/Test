@@ -174,6 +174,7 @@
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
     <Compile Include="Areas\Common\Controllers\HomeController.cs" />
     <Compile Include="Areas\Common\Controllers\LoginController.cs" />
+    <Compile Include="Common\AdminController.cs" />
     <Compile Include="Common\ConfigSettingHelper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -386,6 +387,7 @@
     <Folder Include="Areas\Authen\Models\" />
     <Folder Include="Areas\Authen\Views\Module\" />
     <Folder Include="Areas\Common\Models\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

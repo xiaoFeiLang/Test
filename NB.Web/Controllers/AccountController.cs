@@ -12,7 +12,7 @@ using NB.Web.Models;
 
 namespace NB.Web.Controllers
 {
-    [Authorize]
+    [Authorize] 
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
